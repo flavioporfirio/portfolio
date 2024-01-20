@@ -2,19 +2,29 @@ import "./App.css";
 
 export default function About() {
   return (
-    <div>
+    <div id="about" className="section">
       <div className="intro">
-        <div className="about">
+        <div className="name">
+          <span className="text first-text">Me chamo </span>
+          <span className="text sec-text">Flávio Porfírio</span>
+        </div>
+        <div className="about--title">
           <span className="text first-text">Eu sou um </span>
           <span className="text sec-text">Desenvolvedor Front-end</span>
         </div>
         <p></p>
-        <a href="https://drive.google.com/file/d/1quBRFfzRO76EPUNO4wvNh7dCIVsJjl6D/view">
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1quBRFfzRO76EPUNO4wvNh7dCIVsJjl6D/view"
+          rel="noreferrer"
+        >
           <button className="btn-cv">CV</button>
         </a>
       </div>
 
-      <div className="profile-img"></div>
+      <div className="profile-img">
+        <img src="./imgs/profile-img.jpg" alt="imagem de perfil" />
+      </div>
     </div>
   );
 }

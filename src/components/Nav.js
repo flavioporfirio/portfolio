@@ -1,20 +1,15 @@
 import "./App.css";
+import Logo from "./Logo";
 
 export default function Nav() {
   return (
     <nav>
-      <SetLanguage />
-      <SectionList />
-      {/* <ThemeToggler /> */}
-    </nav>
-  );
-}
+      <a href="#about">
+        <Logo />
+      </a>
 
-function SetLanguage() {
-  return (
-    <div>
-      <p>English | Português</p>
-    </div>
+      <SectionList />
+    </nav>
   );
 }
 
@@ -23,16 +18,16 @@ function SectionList() {
     <div className="section-list">
       <ul>
         <li>
-          <a href="#">Sobre</a>
+          <a href="#about">Sobre</a>
         </li>
         <li>
-          <a href="#">Habilidades</a>
+          <a href="#skills">Habilidades</a>
         </li>
         <li>
-          <a href="#">Projetos</a>
+          <a href="#projects">Projetos</a>
         </li>
         <li>
-          <a href="#">Contato</a>
+          <a href="#contact">Contato</a>
         </li>
       </ul>
       <ThemeToggler />
@@ -42,8 +37,10 @@ function SectionList() {
 
 function ThemeToggler() {
   return (
-    <div>
-      <ion-icon name="moon-outline"></ion-icon>
+    <div className="theme-toggler">
+      <button className="btn-theme">
+        <ion-icon name="moon-outline"></ion-icon>
+      </button>
     </div>
   );
 }
