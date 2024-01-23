@@ -208,9 +208,42 @@ nav {
 }
 
 .logos--list {
+  position: relative;
+
   display: flex;
   white-space: nowrap;
+
   overflow: hidden;
+}
+
+.logos--list::before,
+.logos--list::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 5rem;
+  height: 100%;
+
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+
+  z-index: 10;
+}
+
+.logos--list::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+}
+
+.logos--list::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
 }
 
 .logos--slide {
@@ -220,7 +253,7 @@ nav {
   animation: 15s slide infinite linear;
 }
 
-.logos--slide:hover {
+.logos--list:hover .logos--slide {
   animation-play-state: paused;
 }
 
@@ -245,4 +278,32 @@ nav {
   to {
     transform: translateX(-100%);
   }
+}
+
+#projects {
+  min-height: 100vh;
+}
+
+#projects h1 {
+  font-size: 4.8rem;
+  padding-bottom: 3rem;
+}
+
+.projects--list {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+}
+
+.project--info {
+  padding-right: 40rem;
+}
+
+.project--image img {
+  text-align: center;
+  width: 30rem;
 }
