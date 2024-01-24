@@ -12,25 +12,39 @@ export default function Skills() {
   );
 }
 
-function LogoSlide() {
+export function LogoSlide({
+  html = true,
+  css = true,
+  js = true,
+  react = true,
+  className = "",
+}) {
   return (
-    <div className="logos--slide">
-      <div>
-        <img src="./imgs/skills/html.svg" alt="" />
-        <p>HTML</p>
-      </div>
-      <div>
-        <img src="./imgs/skills/js.svg" alt="" />
-        <p>JavaScript</p>
-      </div>
-      <div>
-        <img src="./imgs/skills/css.svg" alt="" />
-        <p>CSS</p>
-      </div>
-      <div>
-        <img src="./imgs/skills/react.svg" alt="" />
-        <p>React</p>
-      </div>
+    <div className={`logos--slide ${className}`}>
+      {html && (
+        <div>
+          <img src="./imgs/skills/html.svg" alt="html logo" />
+          <p>HTML</p>
+        </div>
+      )}
+      {js && (
+        <div>
+          <img src="./imgs/skills/js.svg" alt="javascript logo" />
+          <p>JavaScript</p>
+        </div>
+      )}
+      {css && (
+        <div>
+          <img src="./imgs/skills/css.svg" alt="css logo" />
+          <p>CSS</p>
+        </div>
+      )}
+      {react && (
+        <div>
+          <img src="./imgs/skills/react.svg" alt="react logo" />
+          <p>React</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -3,6 +3,9 @@ import "./App.css";
 export default function About() {
   return (
     <div id="about" className="section">
+      <div className="profile-img">
+        <img src="./imgs/profile-img.jpg" alt="imagem de perfil" />
+      </div>
       <div className="intro">
         <div className="name">
           <span className="text first-text">Me chamo </span>
@@ -20,10 +23,6 @@ export default function About() {
         >
           <button className="btn-cv">CV</button>
         </a>
-      </div>
-
-      <div className="profile-img">
-        <img src="./imgs/profile-img.jpg" alt="imagem de perfil" />
       </div>
     </div>
   );

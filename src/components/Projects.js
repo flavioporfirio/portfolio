@@ -1,31 +1,40 @@
 import "./App.css";
+import { projectList } from "./Project/ProjectList";
+import { LogoSlide } from "./Skills";
 
 export default function Projects() {
   return (
     <div id="projects" className="section">
       <h1>Projetos</h1>
       <div className="projects--list">
-        <Project />
+        {projectList.map((project) => (
+          <Project
+            title={project.title}
+            projectInfo={project.projectInfo}
+            tech={project.tech}
+            image={project.image}
+            link={project.link}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-function Project() {
+function Project({ title, projectInfo, tech, image, link }) {
   return (
     <div className="project">
       <div className="project--info">
-        <h2>Example</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-          possimus numquam odio assumenda neque, animi sequi nulla mollitia,
-          facere soluta magnam quisquam nobis veniam blanditiis quo eveniet
-          asperiores quos esse.
-        </p>
-        <div></div>
+        <h2>{title}</h2>
+        <p>{projectInfo}</p>
+        <div className="project-techs">
+          <LogoSlide react={false} className="project--style" />
+        </div>
       </div>
       <div className="project--image">
-        <img src="./imgs/main-img.jpg" alt="" />
+        <a target="_blank" href={link} rel="noreferrer">
+          <img src={image} alt="" />
+        </a>
       </div>
     </div>
   );
