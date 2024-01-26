@@ -22,25 +22,25 @@ export function LogoSlide({
   return (
     <div className={`logos--slide ${className}`}>
       {html && (
-        <div>
+        <div className="item">
           <img src="./imgs/skills/html.svg" alt="html logo" />
           <p>HTML</p>
         </div>
       )}
       {js && (
-        <div>
+        <div className="item">
           <img src="./imgs/skills/js.svg" alt="javascript logo" />
           <p>JavaScript</p>
         </div>
       )}
       {css && (
-        <div>
+        <div className="item">
           <img src="./imgs/skills/css.svg" alt="css logo" />
           <p>CSS</p>
         </div>
       )}
       {react && (
-        <div>
+        <div className="item">
           <img src="./imgs/skills/react.svg" alt="react logo" />
           <p>React</p>
         </div>
