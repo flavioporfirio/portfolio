@@ -1,19 +1,25 @@
+import { useState } from "react";
 import "./App.css";
 import { projectList } from "./Project/ProjectList";
 import { LogoSlide } from "./Skills";
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  function handleSelected(id) {
+    setSelectedProject(id !== selectedProject ? id : null);
+  }
+
   return (
     <div id="projects" className="section">
       <h1>Projetos</h1>
       <div className="projects--list">
         {projectList.map((project) => (
           <Project
-            title={project.title}
-            projectInfo={project.projectInfo}
-            tech={project.tech}
-            image={project.image}
-            link={project.link}
+            project={project}
+            key={project.id}
+            onHandleSelected={handleSelected}
+            selectedProject={selectedProject}
           />
         ))}
       </div>
@@ -21,21 +27,27 @@ export default function Projects() {
   );
 }
 
-function Project({ title, projectInfo, tech, image, link }) {
+function Project({ project, onHandleSelected, selectedProject }) {
   return (
-    <div className="project">
-      <div className="project--info">
-        <h2>{title}</h2>
-        <p>{projectInfo}</p>
-        <div className="project-techs">
-          <LogoSlide react={false} className="project--style" />
+    <div
+      className="project"
+      onClick={() => {
+        onHandleSelected(project.id);
+      }}
+    >
+      {selectedProject === project.id ? (
+        <div className="project--info">
+          <h2>{project.title}</h2>
+          <p>{project.projectInfo}</p>
+          <div className="project-techs">
+            <LogoSlide react={false} className="project--style" />
+          </div>
         </div>
-      </div>
-      <div className="project--image">
-        <a target="_blank" href={link} rel="noreferrer">
-          <img src={image} alt="" />
-        </a>
-      </div>
+      ) : (
+        <div className="project--image">
+          <img src={project.image} alt="" />
+        </div>
+      )}
     </div>
   );
 }
