@@ -3,8 +3,16 @@ import "./App.css";
 import { projectList } from "./Project/ProjectList";
 import { LogoSlide } from "./Skills";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [projView, setProjView] = useState(15);
 
   function handleSelected(id) {
     setSelectedProject(id !== selectedProject ? id : null);
@@ -13,15 +21,27 @@ export default function Projects() {
   return (
     <div id="projects" className="section">
       <h1>Projetos</h1>
-      <div className="projects--list">
-        {projectList.map((project) => (
-          <Project
-            project={project}
-            key={project.id}
-            onHandleSelected={handleSelected}
-            selectedProject={selectedProject}
-          />
-        ))}
+      <div className="swiper--container">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          // spaceBetween={0}
+          slidesPerView={2}
+          slidesOffsetBefore={50}
+          navigation
+          scrollbar={{ draggable: true }}
+          a11y
+        >
+          {projectList.map((project) => (
+            <SwiperSlide>
+              <Project
+                project={project}
+                key={project.id}
+                onHandleSelected={handleSelected}
+                selectedProject={selectedProject}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
