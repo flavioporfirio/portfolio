@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [projView, setProjView] = useState(15);
 
   function handleSelected(id) {
     setSelectedProject(id !== selectedProject ? id : null);
@@ -32,10 +31,9 @@ export default function Projects() {
           a11y
         >
           {projectList.map((project) => (
-            <SwiperSlide>
+            <SwiperSlide key={project.id}>
               <Project
                 project={project}
-                key={project.id}
                 onHandleSelected={handleSelected}
                 selectedProject={selectedProject}
               />

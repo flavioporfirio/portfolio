@@ -393,3 +393,8 @@ nav {
   font-size: 4.8rem;
   padding-bottom: 6rem;
 }
+
+#contact input,
+#contact textarea {
+  color: #000;
+}
