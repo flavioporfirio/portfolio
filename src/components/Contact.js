@@ -7,44 +7,68 @@ export default function Contact() {
       <h1>Contact</h1>
       <div className="contact-container">
         <div className="contact-info">
-          <div>
+          <div className="social-info">
             <h2>Redes Sociais</h2>
-            <div>
+            <div className="icons-container">
               <span>
                 <ion-icon name="person-add-outline"></ion-icon>
               </span>
               <ul>
                 <li>
-                  <ion-icon name="logo-linkedin"></ion-icon>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/flavio-porfirio/"
+                    rel="noreferrer"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
                 </li>
                 <li>
-                  <ion-icon name="logo-instagram"></ion-icon>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/flavioporfirio86/"
+                    rel="noreferrer"
+                  >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
                 </li>
                 <li>
-                  <ion-icon name="logo-github"></ion-icon>
+                  <a
+                    target="_blank"
+                    href="https://github.com/flavioporfirio"
+                    rel="noreferrer"
+                  >
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
                 </li>
                 <li>
-                  <ion-icon name="logo-twitter"></ion-icon>
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/flavioporfirio8"
+                    rel="noreferrer"
+                  >
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div>
+          <div className="email-info">
             <h2>E-mail</h2>
-            <div>
+            <div className="icons-container">
               <span>
                 <ion-icon name="at-outline"></ion-icon>
               </span>
               <p>flavioporfirio86@gmail.com</p>
             </div>
           </div>
-          <div>
+          <div className="phone-info">
             <h2>Telefone</h2>
-            <div>
+            <div className="icons-container">
               <span>
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </span>
-              <p>+55 11 96161-9771</p>
+              <p>+55 (11) 96161-9771</p>
             </div>
           </div>
         </div>
@@ -75,36 +99,35 @@ function ContactForms() {
 
   return (
     <form className="contact-forms" onSubmit={(e) => e.preventDefault()}>
-      <label value={name}>Nome</label>
+      {/* <label value={name}>Nome</label> */}
       <input
         type="text"
         onChange={(e) => setName(e.target.value)}
         placeholder="Nome"
       />
 
-      <label value={email}>E-mail</label>
+      {/* <label value={email}>E-mail</label> */}
       <input
         type="email"
         onChange={(e) => setEmail(e.target.value)}
         placeholder="E-mail"
       />
 
-      <label value={phone}>Telefone</label>
+      {/* <label value={phone}>Telefone</label> */}
       <input
         type="tel"
         onChange={(e) => setPhone(e.target.value)}
         placeholder="Telefone"
       />
 
-      <label value={message}>Mensagem</label>
+      {/* <label value={message}>Mensagem</label> */}
       <textarea
         type=""
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Mensagem"
       />
-      <div className="send">
+      <div className="send-container">
         <button className="btn-email">
-          {" "}
           <ion-icon name="mail-outline"></ion-icon>
           Enviar
         </button>
