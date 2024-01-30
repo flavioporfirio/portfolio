@@ -98,39 +98,60 @@ function ContactForms() {
   }
 
   return (
-    <form className="contact-forms" onSubmit={(e) => e.preventDefault()}>
-      {/* <label value={name}>Nome</label> */}
-      <input
-        type="text"
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Nome"
-      />
+    <form
+      className="contact-forms"
+      target="_blank"
+      action="https://formsubmit.co/flavioporfirio86@gmail.com"
+      method="POST"
+    >
+      <div className="input-group">
+        <input
+          type="text"
+          name="name"
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <label value={name}>Nome</label>
+      </div>
 
-      {/* <label value={email}>E-mail</label> */}
-      <input
-        type="email"
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="E-mail"
-      />
+      <div className="input-group">
+        <input
+          type="email"
+          name="email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <label value={email}>E-mail</label>
+      </div>
 
-      {/* <label value={phone}>Telefone</label> */}
-      <input
-        type="tel"
-        onChange={(e) => setPhone(e.target.value)}
-        placeholder="Telefone"
-      />
+      <div className="input-group">
+        <input
+          type="tel"
+          name="tel"
+          onChange={(e) => setPhone(e.target.value)}
+          required
+        />
+        <label value={phone}>Telefone</label>
+      </div>
 
-      {/* <label value={message}>Mensagem</label> */}
-      <textarea
-        type=""
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Mensagem"
-      />
+      <div className="input-group">
+        <textarea
+          name="message"
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        />
+        <label value={message}>Mensagem</label>
+      </div>
+
       <div className="send-container">
         <button className="btn-email">
           <ion-icon name="mail-outline"></ion-icon>
           Enviar
+          <input type="hidden" name="_subject" value="Novo Contato!" />
+          <input type="text" name="_honey" style={{ display: "none" }} />
+          <input type="hidden" name="_captcha" value={false} />
         </button>
+        <input type="hidden" name="_subject" value="Novo Contato!" />
         <button className="btn-whatsapp" onClick={() => SendWhatsAppMessage()}>
           <ion-icon name="logo-whatsapp"></ion-icon>
           Enviar

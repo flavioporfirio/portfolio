@@ -208,9 +208,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 40px;
-}
 
-#skills {
+  padding-inline: 4%;
+
   width: 100%;
   min-height: 20vh;
 }
@@ -314,7 +314,6 @@ nav {
 }
 
 #projects {
-  min-height: 100vh;
   padding-inline: 0;
 
   overflow-x: hidden;
@@ -481,18 +480,54 @@ nav {
   flex: 1 1 50rem;
 }
 
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  font-size: 2rem;
+  padding: 0 0.5rem;
+
+  pointer-events: none;
+
+  color: #666;
+
+  transition: 0.5s;
+}
+
 .contact-forms input,
 .contact-forms textarea {
   padding: 1rem;
 
+  outline: none;
+
+  border: 1px solid #b854e4;
   border-radius: 0.75rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  width: 100%;
 
   color: #fff;
-  background-color: #27272a;
+  background-color: transparent;
 }
+
 .contact-forms textarea {
   height: 25rem;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+  top: -8px;
+
+  font-size: 1.6rem;
+
+  color: #b854e4;
+  background-color: #010718;
 }
 
 .contact-forms .send-container {
@@ -516,6 +551,8 @@ nav {
 
   color: #fff;
   background-color: #b854e4;
+
+  cursor: pointer;
 }
 
 .send-container .btn-whatsapp {
