@@ -3,7 +3,9 @@ import "./App.css";
 import { formationList } from "./Formation/formationList";
 
 export default function Formations() {
-  const [selectedFormation, setSelectedFormation] = useState(null);
+  const [selectedFormation, setSelectedFormation] = useState(
+    formationList[0].id
+  );
 
   function handleSelectedFormation(id) {
     setSelectedFormation(selectedFormation !== id ? id : null);
@@ -48,7 +50,10 @@ function Formation({
         <div className={"formation-body"}>
           <header>
             <div className="course-logo">
-              <img src="" alt="" />
+              <img
+                src={formation.courseTech}
+                alt={`${formation.courseName} learned tech`}
+              />
             </div>
             <div className="course-title">
               <h3>{formation.courseName}</h3>
@@ -58,10 +63,10 @@ function Formation({
               </div>
             </div>
           </header>
-          <p>{formation.description}</p>
+          <p className="description">{formation.description}</p>
           <hr />
-          <div className="teacher-info">
-            <div>
+          <div className="teacher-container">
+            <div className="teacher-info">
               <img
                 src={formation?.teacherProfileImg}
                 alt={`${formation.teacher} profile pic`}
@@ -70,13 +75,13 @@ function Formation({
             </div>
             <div className="teacher-contact">
               <a target="_blank" href={formation.github} rel="noreferrer">
-                <img src="./imgs/skills/react.svg" alt="" />
+                <ion-icon name="logo-github"></ion-icon>
               </a>
               <a target="_blank" href={formation.linkedIn} rel="noreferrer">
-                <img src="./imgs/skills/react.svg" alt="" />
+                <ion-icon name="logo-linkedin"></ion-icon>
               </a>
               <a target="_blank" href={formation.github} rel="noreferrer">
-                <img src="./imgs/skills/react.svg" alt="" />
+                <ion-icon name="globe-outline"></ion-icon>
               </a>
             </div>
           </div>
