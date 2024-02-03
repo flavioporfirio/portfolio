@@ -1,58 +1,83 @@
 import { useState } from "react";
 import "./App.css";
+import { formationList } from "./Formation/formationList";
 
 export default function Formations() {
+  const [selectedFormation, setSelectedFormation] = useState(null);
+
+  function handleSelectedFormation(id) {
+    setSelectedFormation(selectedFormation !== id ? id : null);
+  }
+
   return (
     <div id="formations" className="section">
+      <h1>Educação</h1>
       <div className="formation-container">
-        <Formation />
-
-        <Formation />
+        {formationList.map((formation) => (
+          <Formation
+            formation={formation}
+            onHandleSelectedFormation={handleSelectedFormation}
+            selectedFormation={selectedFormation}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-function Formation() {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Formation({
+  formation,
+  onHandleSelectedFormation,
+  selectedFormation,
+}) {
   return (
-    <div className="formation" style={{}}>
-      <div className="header" onClick={() => setIsOpen(!isOpen)}>
-        <p>2022</p>
-        <p>The Ultimate React course</p>
-        <p>67 horas</p>
+    <div
+      className={`formation ${
+        selectedFormation === formation.id ? "active" : ""
+      }`}
+    >
+      <div
+        className="header"
+        onClick={() => onHandleSelectedFormation(formation.id)}
+      >
+        <p>{formation.year}</p>
+        <p>{formation.courseName}</p>
+        <p>{formation.duration} horas</p>
       </div>
-      {isOpen ? (
-        <div className="-formation-body">
+      {selectedFormation === formation.id ? (
+        <div className={"formation-body"}>
           <header>
             <div className="course-logo">
               <img src="" alt="" />
             </div>
             <div className="course-title">
-              <h3>Ignite - ReactJS</h3>
+              <h3>{formation.courseName}</h3>
               <div className="company-info">
-                <p>Rocketseat</p>
-                <p>67 horas</p>
+                <p>{formation.companyName}</p>
+                <p>{formation.duration} horas</p>
               </div>
             </div>
           </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex
-            eum! Aliquid consequuntur, natus nesciunt eos, eum ratione assumenda
-            aperiam molestias facilis cumque earum quia? Tenetur consequatur
-            libero numquam dolore?
-          </p>
+          <p>{formation.description}</p>
           <hr />
           <div className="teacher-info">
             <div>
-              <img src="" alt="" />
+              <img
+                src={formation?.teacherProfileImg}
+                alt={`${formation.teacher} profile pic`}
+              />
               <h2>Diego Fernandes</h2>
             </div>
             <div className="teacher-contact">
-              <img src="./imgs/skills/react.svg" alt="" />
-              <img src="./imgs/skills/react.svg" alt="" />
-              <img src="./imgs/skills/react.svg" alt="" />
+              <a target="_blank" href={formation.github} rel="noreferrer">
+                <img src="./imgs/skills/react.svg" alt="" />
+              </a>
+              <a target="_blank" href={formation.linkedIn} rel="noreferrer">
+                <img src="./imgs/skills/react.svg" alt="" />
+              </a>
+              <a target="_blank" href={formation.github} rel="noreferrer">
+                <img src="./imgs/skills/react.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
