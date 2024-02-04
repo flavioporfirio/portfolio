@@ -1,11 +1,12 @@
-import About from "./About";
-import Contact from "./Contact";
-import Formations from "./Formations";
-import Nav from "./Nav";
-import Projects from "./Projects";
-import Skills from "./Skills";
+import About from "./About/About";
+import Contact from "./Contact/Contact.js";
+import Formations from "./Formation/Formations";
+import Nav from "./Nav/Nav.js";
+import Projects from "./ProjectList/Projects";
+import Skills from "./Skills/Skills";
+import "./app.css";
 
-function App() {
+export default function App() {
   return (
     <div className="app">
       <Nav />
@@ -17,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./App.css";
-import { formationList } from "./Formation/formationList";
+import "./formation.css";
+import { formationList } from "./formationList";
 
 export default function Formations() {
   const [selectedFormation, setSelectedFormation] = useState(

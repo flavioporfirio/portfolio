@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./App.css";
-import { projectList } from "./ProjectList/ProjectList";
-import { LogoSlide } from "./Skills";
+import { LogoSlide } from "../Skills/Skills";
+import "./project.css";
+import { projectList } from "./ProjectList";
 
 import "swiper/css";
 import "swiper/css/navigation";

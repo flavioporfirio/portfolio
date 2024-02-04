@@ -1,0 +1,174 @@
+#contact {
+  min-width: 100svh;
+
+  background-color: #010718;
+}
+
+#contact h1 {
+  font-size: 4.8rem;
+  padding-bottom: 6rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 40rem;
+}
+
+.social-info,
+.email-info,
+.phone-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 2% 4%;
+
+  border-radius: 1.75rem;
+  background-color: #27272a;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.social-info h2,
+.email-info h2,
+.phone-info h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.icons-container span {
+  border: 2px solid #a525de;
+  border-radius: 50%;
+  padding: 2.5rem;
+}
+
+.icons-container span ion-icon {
+  font-size: 3.2rem;
+}
+
+.icons-container li {
+  border: 2px solid #a525de;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+
+  cursor: pointer;
+}
+
+.icons-container li ion-icon {
+  font-size: 2.2rem;
+}
+
+.icons-container p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.social-info ul {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1 1 50rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  font-size: 2rem;
+  padding: 0 0.5rem;
+
+  pointer-events: none;
+
+  color: #666;
+
+  transition: 0.5s;
+}
+
+.contact-forms input,
+.contact-forms textarea {
+  padding: 1rem;
+
+  outline: none;
+
+  border: 1px solid #b854e4;
+  border-radius: 0.75rem;
+  font-size: 1.8rem;
+  width: 100%;
+
+  color: #fff;
+  background-color: transparent;
+}
+
+.contact-forms textarea {
+  height: 25rem;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+  top: -8px;
+
+  font-size: 1.6rem;
+
+  color: #b854e4;
+  background-color: #010718;
+}
+
+.contact-forms .send-container {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+.send-container button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 0.75rem;
+
+  padding: 1rem 10rem;
+
+  color: #fff;
+  background-color: #b854e4;
+
+  cursor: pointer;
+}
+
+.send-container .btn-whatsapp {
+  background-color: #22c55e;
+}
+
+.contact-forms ion-icon {
+  font-size: 2.4rem;
+}

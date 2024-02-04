@@ -1,4 +1,4 @@
-import "./App.css";
+import "./skill.css";
 
 export default function Skills() {
   return (

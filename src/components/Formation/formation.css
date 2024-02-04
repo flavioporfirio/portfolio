@@ -1,0 +1,148 @@
+#formations {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 80vh;
+}
+
+#formations h1 {
+  font-size: 4.8rem;
+  padding-bottom: 6rem;
+}
+
+.formation-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.formation {
+  display: flex;
+
+  width: 4rem;
+  height: 44rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  transition: width 1s ease-in-out;
+
+  background-color: #27272a;
+}
+
+.formation.active {
+  width: 65rem;
+}
+
+.header:hover,
+.formation.active .header {
+  background-color: #b854e4;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  gap: 40px;
+
+  font-weight: 700;
+
+  writing-mode: vertical-lr;
+
+  border-left: 1px solid #b854e4;
+  border-right: 1px solid #b854e4;
+
+  background-color: #010718;
+
+  padding: 1rem;
+
+  cursor: pointer;
+}
+
+.header p {
+  font-size: 1.6rem;
+}
+
+.formation-body {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+  text-wrap: wrap;
+
+  padding: 2rem;
+}
+
+.formation-body header {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  padding-inline: 2rem;
+}
+
+header .course-title h3 {
+  font-size: 2.6rem;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-info p {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.formation-body .description {
+  font-size: 1.8rem;
+}
+
+.formation-body hr {
+  border-top: 1px solid #b854e4;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teacher-info img {
+  width: 6rem;
+  height: auto;
+
+  border-radius: 50%;
+
+  padding: 0.3rem;
+
+  border: 2px solid #b854e4;
+}
+
+.teacher-info h2 {
+  font-size: 2.2rem;
+}
+
+.teacher-contact {
+  display: flex;
+  gap: 20px;
+  padding-top: 2rem;
+}
+
+.teacher-contact a {
+  border: 1px solid #b854e4;
+  border-radius: 0.75rem;
+}
+
+.teacher-contact a ion-icon {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.teacher-contact a:hover {
+  background-color: #b854e4;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
