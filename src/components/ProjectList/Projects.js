@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LogoSlide } from "../Skills/Skills";
-import "./project.css";
 import { projectList } from "./ProjectList";
+import "./project.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,13 +22,27 @@ export default function Projects() {
       <h1>Projetos</h1>
       <div className="swiper--container">
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          // spaceBetween={0}
+          // spaceBetween={10}
           slidesPerView={2}
           slidesOffsetBefore={50}
           navigation
           scrollbar={{ draggable: true }}
           a11y
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+          }}
         >
           {projectList.map((project) => (
             <SwiperSlide key={project.id}>

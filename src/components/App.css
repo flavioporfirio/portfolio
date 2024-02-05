@@ -42,51 +42,6 @@ body {
   padding-bottom: 5%;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 10%;
-}
-
-.logo img {
-  min-width: 100%;
-  width: 15rem;
-  height: auto;
-}
-
-.section-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.section-list ul {
-  display: flex;
-  gap: 20px;
-}
-
-.section-list ul a {
-  font-size: 1.8rem;
-}
-
-.btn-theme {
-  border: none;
-
-  padding: 1.5rem;
-
-  background-color: #010718;
-
-  cursor: pointer;
-}
-
-.btn-theme ion-icon {
-  font-size: 2.5rem;
-  color: #b854e4;
-}
-
 .section {
   min-height: 60vh;
   padding: 7rem 8% 0;
