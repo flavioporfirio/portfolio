@@ -2,7 +2,6 @@ import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
 
 import "./contact.css";
-import "../app.css";
 
 export default function Contact() {
   return (
