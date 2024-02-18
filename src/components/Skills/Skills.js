@@ -1,4 +1,8 @@
 import "./skill.css";
+import cssImg from "../../assets/skills/css.svg";
+import htmlImg from "../../assets/skills/html.svg";
+import jsImg from "../../assets/skills/js.svg";
+import reactImg from "../../assets/skills/react.svg";
 
 export default function Skills() {
   return (
@@ -23,25 +27,25 @@ export function LogoSlide({
     <div className={`logos--slide ${className}`}>
       {html && (
         <div className="item">
-          <img src="./imgs/skills/html.svg" alt="html logo" />
+          <img src={htmlImg} alt="html logo" />
           <p>HTML</p>
         </div>
       )}
       {js && (
         <div className="item">
-          <img src="./imgs/skills/js.svg" alt="javascript logo" />
+          <img src={jsImg} alt="javascript logo" />
           <p>JavaScript</p>
         </div>
       )}
       {css && (
         <div className="item">
-          <img src="./imgs/skills/css.svg" alt="css logo" />
+          <img src={cssImg} alt="css logo" />
           <p>CSS</p>
         </div>
       )}
       {react && (
         <div className="item">
-          <img src="./imgs/skills/react.svg" alt="react logo" />
+          <img src={reactImg} alt="react logo" />
           <p>React</p>
         </div>
       )}

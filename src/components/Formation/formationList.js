@@ -1,10 +1,12 @@
 import { v4 as uuidv4 } from "uuid";
+import js from "../../assets/formations/js.svg";
+import react from "../../assets/formations/react.svg";
 
 export const formationList = [
   {
     id: uuidv4(),
     year: 2022,
-    courseTech: "./imgs/formations/react-js.svg",
+    courseTech: react,
     courseName: "The Ultimate React course",
     duration: 67,
     companyName: "Rocketseat",
@@ -18,7 +20,7 @@ export const formationList = [
   {
     id: uuidv4(),
     year: 2022,
-    courseTech: "./imgs/formations/react-js.svg",
+    courseTech: react,
     courseName: "The Ultimate React course",
     duration: 67,
     companyName: "Rocketseat",
@@ -31,7 +33,7 @@ export const formationList = [
   },
   {
     year: 2022,
-    courseTech: "./imgs/formations/react-js.svg",
+    courseTech: js,
     courseName: "The Ultimate React course",
     duration: 67,
     companyName: "Rocketseat",

@@ -1,14 +1,14 @@
-import Logo from "../Logo";
 import "./nav.css";
+import { Moon } from "lucide-react";
 
 export default function Nav() {
   return (
     <nav>
-      <a href="#about">
-        <Logo />
-      </a>
-
       <SectionList />
+      <div className="config">
+        <p> EN | PT</p>
+        <ThemeToggler />
+      </div>
     </nav>
   );
 }
@@ -30,7 +30,6 @@ function SectionList() {
           <a href="#contact">Contato</a>
         </li>
       </ul>
-      <ThemeToggler />
     </div>
   );
 }
@@ -39,7 +38,7 @@ function ThemeToggler() {
   return (
     <div className="theme-toggler">
       <button className="btn-theme">
-        <ion-icon name="moon-outline"></ion-icon>
+        <Moon color="#b854e4" />
       </button>
     </div>
   );

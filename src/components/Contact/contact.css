@@ -10,16 +10,22 @@
 }
 
 .contact-container {
-  display: flex;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.contact-info {
+.contact-info,
+.contact-forms {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
-  flex: 1 1 40rem;
+
+  width: 100%;
 }
+
+/*----- CONTACT INFO ----- */
 
 .social-info,
 .email-info,
@@ -27,9 +33,11 @@
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
+  gap: 10px;
 
-  padding: 2% 4%;
+  width: 50rem;
+
+  padding: 1rem 2rem;
 
   border-radius: 1.75rem;
   background-color: #27272a;
@@ -52,23 +60,19 @@
 .icons-container span {
   border: 2px solid #a525de;
   border-radius: 50%;
-  padding: 2.5rem;
-}
-
-.icons-container span ion-icon {
-  font-size: 3.2rem;
+  padding: 2rem;
 }
 
 .icons-container li {
   border: 2px solid #a525de;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.75rem;
 
   cursor: pointer;
 }
 
-.icons-container li ion-icon {
-  font-size: 2.2rem;
+.icons-container span ion-icon {
+  font-size: 2.5rem;
 }
 
 .icons-container p {
@@ -81,14 +85,7 @@
   gap: 20px;
 }
 
-.contact-forms {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  justify-content: space-between;
-  gap: 20px;
-  flex: 1 1 50rem;
-}
+/*----- CONTACT FORM ----- */
 
 .input-group {
   position: relative;
@@ -146,9 +143,16 @@
 
   gap: 20px;
 }
+
+.send-container {
+  display: flex;
+}
+
 .send-container button {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex: 1 1 2rem;
   gap: 10px;
 
   font-size: 1.8rem;
@@ -157,7 +161,7 @@
   border: none;
   border-radius: 0.75rem;
 
-  padding: 1rem 10rem;
+  padding: 1rem 10%;
 
   color: #fff;
   background-color: #b854e4;
@@ -171,4 +175,15 @@
 
 .contact-forms ion-icon {
   font-size: 2.4rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact-info {
+    display: none;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    min-width: 20rem;
+  }
 }

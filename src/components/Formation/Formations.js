@@ -64,7 +64,7 @@ function Formation({
             </div>
           </header>
           <p className="description">{formation.description}</p>
-          <hr />
+          <div className="separator" />
           <div className="teacher-container">
             <div className="teacher-info">
               <img
