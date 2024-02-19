@@ -5,7 +5,6 @@ import {
   Github,
   Twitter,
   AtSign,
-  Mail,
 } from "lucide-react";
 
 export default function ContactInfo() {
