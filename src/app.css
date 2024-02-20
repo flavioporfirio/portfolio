@@ -39,12 +39,15 @@ body {
   background-color: #010718;
   overflow-x: hidden;
 
-  padding-bottom: 5%;
+  padding-bottom: 2rem;
 }
 
 .section {
-  min-height: 60vh;
-  padding: 7rem 8% 0;
+  max-width: 120rem;
+  margin: 0 auto;
+
+  /* min-height: 60vh; */
+  padding-block: 7rem 0;
 }
 
 /* .app::after {

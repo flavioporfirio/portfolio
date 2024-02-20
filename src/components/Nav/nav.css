@@ -1,16 +1,16 @@
 nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 2rem 10% 0;
-  /* background-color: #c1c1c1; */
-}
+  padding-block: 2rem;
 
-.logo img {
-  min-width: 100%;
-  width: 15rem;
-  height: auto;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .section-list {
@@ -18,6 +18,21 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  border-radius: 0.75rem;
+}
+
+.btn-menu {
+  border: none;
+  border-radius: 0.75rem;
+
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+
+  background-color: #b854e4;
+
+  cursor: pointer;
 }
 
 .section-list ul {
@@ -25,8 +40,18 @@ nav {
   gap: 20px;
 }
 
+.section-list ul li:hover {
+  text-decoration: underline;
+}
+
 .section-list ul a {
   font-size: 1.8rem;
+}
+
+.config {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .btn-theme {
@@ -37,15 +62,4 @@ nav {
   background-color: #010718;
 
   cursor: pointer;
-}
-
-.btn-theme ion-icon {
-  font-size: 2.5rem;
-  color: #b854e4;
-}
-
-.config {
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }

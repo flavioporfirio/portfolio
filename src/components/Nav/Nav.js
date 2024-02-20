@@ -1,5 +1,6 @@
 import "./nav.css";
-import { Moon } from "lucide-react";
+import { Moon, Menu } from "lucide-react";
+import { useState } from "react";
 
 export default function Nav() {
   return (
@@ -14,22 +15,29 @@ export default function Nav() {
 }
 
 function SectionList() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="section-list">
-      <ul>
-        <li>
-          <a href="#about">Sobre</a>
-        </li>
-        <li>
-          <a href="#skills">Habilidades</a>
-        </li>
-        <li>
-          <a href="#projects">Projetos</a>
-        </li>
-        <li>
-          <a href="#contact">Contato</a>
-        </li>
-      </ul>
+      <button className="btn-menu" onClick={() => setIsOpen(!isOpen)}>
+        <Menu />
+      </button>
+      {isOpen && (
+        <ul>
+          <li>
+            <a href="#about">Sobre</a>
+          </li>
+          <li>
+            <a href="#skills">Habilidades</a>
+          </li>
+          <li>
+            <a href="#projects">Projetos</a>
+          </li>
+          <li>
+            <a href="#contact">Contato</a>
+          </li>
+        </ul>
+      )}
     </div>
   );
 }

@@ -1,8 +1,6 @@
 #formations {
   display: flex;
   flex-direction: column;
-
-  min-height: 80vh;
 }
 
 #formations h1 {

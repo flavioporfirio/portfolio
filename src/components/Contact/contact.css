@@ -1,6 +1,4 @@
 #contact {
-  min-width: 100svh;
-
   background-color: #010718;
 }
 
@@ -22,7 +20,7 @@
   justify-content: space-between;
   gap: 20px;
 
-  width: 100%;
+  max-width: 99vw;
 }
 
 /*----- CONTACT INFO ----- */
