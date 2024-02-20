@@ -49,6 +49,12 @@ body {
   padding: 7rem 6rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .section {
+    padding-inline: 0.5rem;
+  }
+}
+
 /* .app::after {
   content: "";
   position: fixed;
