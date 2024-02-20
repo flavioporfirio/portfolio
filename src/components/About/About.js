@@ -7,12 +7,7 @@ export default function About() {
         <img src="./imgs/profile-image.png" alt="imagem de perfil" />
       </div>
       <div className="intro">
-        {/* <div className="name">
-          <span className="text first-text">Me chamo </span>
-          <span className="text sec-text">Flávio Porfírio</span>
-        </div> */}
         <div className="about--title">
-          {/* <span className="text first-text">Eu sou um </span> */}
           <span className="text sec-text">Desenvolvedor Front-end</span>
         </div>
         <p>
