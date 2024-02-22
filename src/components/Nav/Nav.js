@@ -7,7 +7,7 @@ export default function Nav() {
     <nav>
       <SectionList />
       <div className="config">
-        <p> EN | PT</p>
+        {/*<p> EN | PT</p> */}
         <ThemeToggler />
       </div>
     </nav>
