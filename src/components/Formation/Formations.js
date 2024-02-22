@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./formation.css";
 import { formationList } from "./formationList";
+import * as Accordion from "@radix-ui/react-accordion";
 
 export default function Formations() {
   const [selectedFormation, setSelectedFormation] = useState(
@@ -11,17 +12,40 @@ export default function Formations() {
     setSelectedFormation(selectedFormation !== id ? id : null);
   }
 
+  // return (
+  //   <div id="formations" className="section">
+  //     <h1>Educação</h1>
+  //     <div className="formation-container">
+  //       {formationList.map((formation) => (
+  //         <Formation
+  //           formation={formation}
+  //           onHandleSelectedFormation={handleSelectedFormation}
+  //           selectedFormation={selectedFormation}
+  //         />
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
+
   return (
     <div id="formations" className="section">
       <h1>Educação</h1>
       <div className="formation-container">
-        {formationList.map((formation) => (
-          <Formation
-            formation={formation}
-            onHandleSelectedFormation={handleSelectedFormation}
-            selectedFormation={selectedFormation}
-          />
-        ))}
+        <Accordion.Root
+          className="formations"
+          orientation="horizontal"
+          collapsible
+        >
+          {formationList.map((formation, index) => (
+            <Formation
+              key={index}
+              formation={formation}
+              index={index}
+              onHandleSelectedFormation={handleSelectedFormation}
+              selectedFormation={selectedFormation}
+            />
+          ))}
+        </Accordion.Root>
       </div>
     </div>
   );
@@ -29,25 +53,27 @@ export default function Formations() {
 
 function Formation({
   formation,
-  onHandleSelectedFormation,
+  index,
   selectedFormation,
+  onHandleSelectedFormation,
 }) {
   return (
-    <div
-      className={`formation ${
+    <Accordion.Item
+      className={`project--item ${
         selectedFormation === formation.id ? "active" : ""
       }`}
+      value={`item-${index}`}
     >
-      <div
+      <Accordion.Trigger
         className="header"
         onClick={() => onHandleSelectedFormation(formation.id)}
       >
         <p>{formation.year}</p>
         <p>{formation.courseName}</p>
         <p>{formation.duration} horas</p>
-      </div>
-      {selectedFormation === formation.id ? (
-        <div className={"formation-body"}>
+      </Accordion.Trigger>
+      <Accordion.Content className="accordion-content">
+        <div className="formation-body">
           <header>
             <div className="course-logo">
               <img
@@ -86,9 +112,7 @@ function Formation({
             </div>
           </div>
         </div>
-      ) : (
-        ""
-      )}
-    </div>
+      </Accordion.Content>
+    </Accordion.Item>
   );
 }

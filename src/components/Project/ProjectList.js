@@ -57,5 +57,3 @@ export const projectList = [
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
   },
 ];
-
-console.log(projectList[0].id);
