@@ -34,6 +34,7 @@ export default function Formations() {
         <Accordion.Root
           className="formations"
           orientation="horizontal"
+          defaultValue={"item-0"}
           collapsible
         >
           {formationList.map((formation, index) => (

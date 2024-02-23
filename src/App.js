@@ -4,6 +4,7 @@ import Formations from "./components/Formation/Formations.js";
 import Nav from "./components/Nav/Nav.js";
 import Projects from "./components/Project/Projects.js";
 import Skills from "./components/Skills/Skills.js";
+import { Toaster } from "sonner";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Projects />
       <Formations />
       <Contact />
+      <Toaster richColors visibleToasts={2} />
     </div>
   );
 }
