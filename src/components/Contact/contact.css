@@ -87,6 +87,15 @@
 
 .input-group {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group p {
+  font-size: 1.4rem;
+  color: gray;
 }
 
 .input-group label {

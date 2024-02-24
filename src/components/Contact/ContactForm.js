@@ -1,16 +1,27 @@
-import { useState } from "react";
 import { toast } from "sonner";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import z from "zod";
+
+const createFormSchema = z.object({
+  name: z.string().min(1, "Insira seu nome"),
+  email: z.string().email("Insira um email válido"),
+  phone: z.string().min(11, "Insira seu telefone"),
+  message: z.string().min(1, "Insira sua mensagem"),
+});
 
 export default function ContactForms() {
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const { register, handleSubmit, watch, formState } = useForm({
+    resolver: zodResolver(createFormSchema),
+  });
+
+  const name = watch("name");
+  const email = watch("email");
+  const phone = watch("phone");
+  const message = watch("message");
 
   function SendWhatsAppMessage() {
-    if (!name || !email || !phone || !message) {
-      return;
-    }
+    if (formState.errors) return;
 
     const url = `https://api.whatsapp.com/send?phone=5511961619771&text=`;
 
@@ -22,12 +33,6 @@ export default function ContactForms() {
     ${message}`;
 
     window.open(`${url}${messageInfo}`, "_blank");
-  }
-
-  function validateEmail() {
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    console.log(regex.test(email));
-    return regex.test(email);
   }
 
   function notify() {
@@ -56,42 +61,35 @@ export default function ContactForms() {
       method="POST"
     >
       <div className="input-group">
-        <input
-          type="text"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <label value={name}>Nome</label>
+        <input {...register("name")} id="name" type="text" name="name" />
+        <label htmlFor="name">Nome</label>
+        {formState.errors?.name && (
+          <p className="">{formState.errors?.name.message}</p>
+        )}
       </div>
 
       <div className="input-group">
-        <input
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <label value={email}>E-mail</label>
+        <input {...register("email")} id="email" type="text" />
+        <label htmlFor="email">E-mail</label>
+        {formState.errors?.email && (
+          <p className="">{formState.errors?.email.message}</p>
+        )}
       </div>
 
       <div className="input-group">
-        <input
-          type="tel"
-          name="tel"
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
-        <label value={phone}>Telefone</label>
+        <input {...register("phone")} id="tel" type="text" />
+        <label htmlFor="phone">Telefone</label>
+        {formState.errors?.phone && (
+          <p className="">{formState.errors?.phone.message}</p>
+        )}
       </div>
 
       <div className="input-group">
-        <textarea
-          name="message"
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        />
-        <label value={message}>Mensagem</label>
+        <textarea {...register("message")} id="message" type="text" />
+        <label htmlFor="message">Mensagem</label>
+        {formState.errors?.message && (
+          <p className="">{formState.errors?.message.message}</p>
+        )}
       </div>
 
       <div className="send-container">
@@ -112,7 +110,6 @@ export default function ContactForms() {
           className="btn-whatsapp"
           onClick={() => {
             SendWhatsAppMessage();
-            notify();
           }}
         >
           <ion-icon name="logo-whatsapp"></ion-icon>
