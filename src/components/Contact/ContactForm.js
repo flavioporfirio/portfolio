@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import z from "zod";
+import { Loader2 } from "lucide-react";
 
 const createFormSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
@@ -13,7 +14,7 @@ const createFormSchema = z.object({
 });
 
 export default function ContactForms() {
-  const [sendByEmail, setSendByEmail] = useState(true);
+  const [sendByEmail, setSendByEmail] = useState(null);
 
   const { register, handleSubmit, watch, formState } = useForm({
     resolver: zodResolver(createFormSchema),
@@ -117,7 +118,11 @@ export default function ContactForms() {
             setSendByEmail(true);
           }}
         >
-          <ion-icon name="mail-outline"></ion-icon>
+          {formState.isSubmitting ? (
+            <Loader2 className="loader" />
+          ) : (
+            <ion-icon name="mail-outline"></ion-icon>
+          )}
           Enviar
         </button>
         <button

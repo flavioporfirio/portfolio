@@ -12,21 +12,6 @@ export default function Formations() {
     setSelectedFormation(selectedFormation !== id ? id : null);
   }
 
-  // return (
-  //   <div id="formations" className="section">
-  //     <h1>Educação</h1>
-  //     <div className="formation-container">
-  //       {formationList.map((formation) => (
-  //         <Formation
-  //           formation={formation}
-  //           onHandleSelectedFormation={handleSelectedFormation}
-  //           selectedFormation={selectedFormation}
-  //         />
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
-
   return (
     <div id="formations" className="section">
       <h1>Educação</h1>

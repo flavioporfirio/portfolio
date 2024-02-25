@@ -18,7 +18,7 @@
   gap: 0px;
 
   min-height: 45rem;
-  height: auto;
+  height: 48rem;
 }
 
 .header {
@@ -63,7 +63,7 @@
 
   max-width: 60rem;
   width: auto;
-  min-height: 100%;
+  min-height: 48rem;
 }
 
 .formation-body header {
@@ -151,28 +151,16 @@ header .course-title h3 {
   overflow: hidden;
 }
 .accordion-content[data-state="open"] {
-  animation: slideDown 800ms ease-in;
+  animation: slideRight 1000ms ease-in;
 }
 
-.accordion-content[data-state="open"] .header {
-  background-color: #b854e4;
-}
-
-@keyframes slideDown {
+@keyframes slideRight {
   from {
-    height: 0;
+    width: 30%;
+    height: 48rem;
   }
   to {
-    height: 40rem;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    height: 40rem;
-  }
-  to {
-    height: 0;
+    width: 100%;
   }
 }
 
