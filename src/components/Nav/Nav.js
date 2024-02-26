@@ -41,7 +41,7 @@ function SectionList() {
   return (
     <div className="section-list">
       <button className="btn-menu" onClick={() => setIsOpen(!isOpen)}>
-        <Menu />
+        <Menu className="menu-icon" />
       </button>
       {isOpen && (
         <ul>
@@ -77,7 +77,7 @@ function ThemeToggler({ theme, setTheme }) {
           );
         }}
       >
-        <Moon color="#b854e4" />
+        <Moon className="moon-icon" />
       </button>
     </div>
   );

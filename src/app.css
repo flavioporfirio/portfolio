@@ -12,18 +12,26 @@
   outline: none;
   border: none;
 
-  color: #fff;
+  color: var(--primary-text-color);
   font-family: "Poppings", sans-serif;
 }
 
 *::selection {
   color: #fff;
-  background-color: #b854e4;
+  background-color: var(--secondary-text-color);
 }
 
 :root {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
+
+  --bg-color: #14121f;
+  --section-color: #291f43;
+  --border-separator-color: #473876;
+  --btn-color: #6e56cf;
+  --secondary-text-color: #baa7ff;
+  --primary-text-color: #e2ddfe;
+  --bg-formation-color: #27272a;
 
   --swiper-scrollbar-bg-color: rgb(184, 84, 228, 0.1);
   --swiper-scrollbar-drag-bg-color: rgb(184, 84, 228, 0.5);
@@ -36,24 +44,25 @@
 
 body {
   min-height: 100vh;
-  background-color: #010718;
+  background-color: var(--bg-color);
   overflow-x: hidden;
 
   padding-bottom: 2rem;
+
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 body.dark {
-  background-color: #010718;
+  background-color: var(--bg-color);
 }
 
 body.light {
-  background-color: #fff;
+  background-color: #e2ddfe;
 }
 
 .section {
   max-width: 120rem;
-  margin: 0 auto;
-
   padding: 7rem 6rem;
 }
 

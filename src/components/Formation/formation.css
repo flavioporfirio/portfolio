@@ -1,6 +1,38 @@
 #formations {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+
+  background-color: var(--section-color);
+}
+
+#formations::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 100%;
+
+  background-color: var(--section-color);
+  z-index: -1;
+}
+
+#formations::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100%;
+
+  background-color: var(--section-color);
+  z-index: -1;
 }
 
 #formations h1 {
@@ -29,10 +61,10 @@
 
   writing-mode: vertical-lr;
 
-  border-left: 1px solid #b854e4;
-  border-right: 1px solid #b854e4;
+  border-left: 1px solid var(--border-separator-color);
+  border-right: 1px solid var(--border-separator-color);
 
-  background-color: #010718;
+  background-color: var(--btn-color);
 
   padding: 1rem;
 
@@ -41,13 +73,13 @@
 
 .header:hover,
 .project--item.active .header {
-  background-color: #b854e4;
+  background-color: var(--bg-color);
 
   cursor: pointer;
 }
 
 .header:checked {
-  background-color: #b854e4;
+  background-color: var(--bg-color);
 }
 
 .header p {
@@ -100,7 +132,7 @@ header .course-title h3 {
 }
 
 .formation-body .separator {
-  border-top: 1px solid #b854e4;
+  border-top: 1px solid var(--border-separator-color);
 }
 
 .teacher-info {
@@ -117,7 +149,7 @@ header .course-title h3 {
 
   padding: 0.3rem;
 
-  border: 2px solid #b854e4;
+  border: 2px solid var(--border-separator-color);
 }
 
 .teacher-info h2 {
@@ -131,7 +163,7 @@ header .course-title h3 {
 }
 
 .teacher-contact a {
-  border: 1px solid #b854e4;
+  border: 1px solid var(--border-separator-color);
   border-radius: 0.75rem;
 }
 
@@ -141,13 +173,13 @@ header .course-title h3 {
 }
 
 .teacher-contact a:hover {
-  background-color: #b854e4;
+  background-color: var(--bg-color);
   transform: scale(1.1);
   transition: transform 0.5s;
 }
 
 .accordion-content {
-  background-color: #27272a;
+  background-color: var(--bg-formation-color);
   overflow: hidden;
 }
 .accordion-content[data-state="open"] {

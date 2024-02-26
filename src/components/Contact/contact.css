@@ -1,7 +1,3 @@
-#contact {
-  background-color: #010718;
-}
-
 #contact h1 {
   font-size: 4.8rem;
   padding-bottom: 6rem;
@@ -38,7 +34,7 @@
   padding: 1rem 2rem;
 
   border-radius: 1.75rem;
-  background-color: #27272a;
+  background-color: var(--bg-color);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -56,13 +52,13 @@
 }
 
 .icons-container span {
-  border: 2px solid #a525de;
+  border: 2px solid var(--border-separator-color);
   border-radius: 50%;
   padding: 2rem;
 }
 
 .icons-container li {
-  border: 2px solid #a525de;
+  border: 2px solid var(--border-separator-color);
   padding: 1rem;
   border-radius: 0.75rem;
 
@@ -95,7 +91,7 @@
 
 .input-group p {
   font-size: 1.4rem;
-  color: gray;
+  color: var(--primary-text-color);
 }
 
 .input-group label {
@@ -108,7 +104,7 @@
 
   pointer-events: none;
 
-  color: #666;
+  color: var(--primary-text-color);
 
   transition: 0.5s;
 }
@@ -119,7 +115,7 @@
 
   outline: none;
 
-  border: 1px solid #b854e4;
+  border: 1px solid var(--border-separator-color);
   border-radius: 0.75rem;
   font-size: 1.8rem;
   width: 100%;
@@ -141,7 +137,7 @@
   font-size: 1.6rem;
 
   color: #b854e4;
-  background-color: #010718;
+  background-color: var(--bg-color);
 }
 
 .contact-forms .send-container {
@@ -170,8 +166,8 @@
 
   padding: 1rem 10%;
 
-  color: #fff;
-  background-color: #b854e4;
+  color: var(--primary-text-color);
+  background-color: var(--btn-color);
 
   cursor: pointer;
 }
