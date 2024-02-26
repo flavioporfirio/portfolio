@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from "uuid";
-import js from "../../assets/formations/js.svg";
 import react from "../../assets/formations/react.svg";
 
 export const formationList = [
