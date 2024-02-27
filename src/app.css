@@ -12,7 +12,6 @@
   outline: none;
   border: none;
 
-  color: var(--primary-text-color);
   font-family: "Poppings", sans-serif;
 }
 
@@ -24,14 +23,6 @@
 :root {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
-
-  --bg-color: #14121f;
-  --section-color: #291f43;
-  --border-separator-color: #473876;
-  --btn-color: #6e56cf;
-  --secondary-text-color: #baa7ff;
-  --primary-text-color: #e2ddfe;
-  --bg-formation-color: #27272a;
 
   --swiper-scrollbar-bg-color: rgb(184, 84, 228, 0.1);
   --swiper-scrollbar-drag-bg-color: rgb(184, 84, 228, 0.5);
@@ -54,11 +45,28 @@ body {
 }
 
 body.dark {
-  background-color: var(--bg-color);
+  --bg-color: #14121f;
+  --section-color: #291f43;
+  --border-separator-color: #473876;
+  --btn-color: #6e56cf;
+  --secondary-text-color: #baa7ff;
+  --primary-text-color: #e2ddfe;
+  --bg-formation-color: #27272a;
+  --border-separator-color: #473876;
+
+  color: var(--primary-text-color);
 }
 
 body.light {
-  background-color: #e2ddfe;
+  --bg-color: #f4f4f5;
+  --section-color: #e2ddfe;
+  --btn-color: #baa7ff;
+
+  --bg-formation-color: #d8d8d5;
+  --border-separator-color: #473876;
+
+  --secondary-text-color: #14121f;
+  --primary-text-color: #291f43;
 }
 
 .section {

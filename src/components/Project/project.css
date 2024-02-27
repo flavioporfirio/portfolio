@@ -88,7 +88,7 @@
   gap: 10px;
   border: none;
 
-  color: #fff;
+  color: var(--primary-text-color);
   background: none;
   padding: 1rem 1rem;
 
@@ -96,7 +96,7 @@
 }
 
 .project--access a:hover {
-  border-color: var(--border-separator-color);
+  border-color: var(--section-color);
 }
 
 .project--image {

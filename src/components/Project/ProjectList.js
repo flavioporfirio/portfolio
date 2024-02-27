@@ -11,6 +11,10 @@ export const projectList = [
     siteLink: "https://financial-control-flavioporfirio86.netlify.app/",
     repositoryLink: "https://github.com/flavioporfirio/financial-control",
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
+    react: true,
+    js: true,
+    html: true,
+    css: true,
   },
   {
     id: uuidv4(),
@@ -22,6 +26,10 @@ export const projectList = [
     siteLink: "https://financial-control-flavioporfirio86.netlify.app/",
     repositoryLink: "https://github.com/flavioporfirio/financial-control",
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
+    react: false,
+    js: true,
+    html: true,
+    css: true,
   },
   {
     id: uuidv4(),
@@ -33,6 +41,10 @@ export const projectList = [
     siteLink: "https://financial-control-flavioporfirio86.netlify.app/",
     repositoryLink: "https://github.com/flavioporfirio/financial-control",
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
+    react: false,
+    js: true,
+    html: true,
+    css: true,
   },
   {
     id: uuidv4(),
@@ -44,6 +56,10 @@ export const projectList = [
     siteLink: "https://financial-control-flavioporfirio86.netlify.app/",
     repositoryLink: "https://github.com/flavioporfirio/financial-control",
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
+    react: false,
+    js: true,
+    html: true,
+    css: true,
   },
   {
     id: uuidv4(),
@@ -55,5 +71,9 @@ export const projectList = [
     siteLink: "https://financial-control-flavioporfirio86.netlify.app/",
     repositoryLink: "https://github.com/flavioporfirio/financial-control",
     youtubeLink: "https://www.youtube.com/channel/UC6ewHz-YN0KpRCWoAH-sdMA",
+    react: false,
+    js: true,
+    html: true,
+    css: true,
   },
 ];

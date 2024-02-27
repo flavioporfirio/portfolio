@@ -17,7 +17,13 @@ export default function Project({
           <h2>{project.title}</h2>
           <p>{project.projectInfo}</p>
           <div className="project-techs">
-            <LogoSlide react={false} className="project--style" />
+            <LogoSlide
+              react={project.react}
+              js={project.js}
+              html={project.html}
+              css={project.css}
+              className="project--style"
+            />
           </div>
           <ProjectAccess
             repository={project.repositoryLink}

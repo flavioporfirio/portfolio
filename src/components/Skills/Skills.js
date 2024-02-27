@@ -1,8 +1,8 @@
-import "./skill.css";
 import cssImg from "../../assets/skills/css.svg";
 import htmlImg from "../../assets/skills/html.svg";
 import jsImg from "../../assets/skills/js.svg";
 import reactImg from "../../assets/skills/react.svg";
+import "./skill.css";
 
 export default function Skills() {
   return (

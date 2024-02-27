@@ -84,6 +84,7 @@
 
 .header p {
   font-size: 1.6rem;
+  color: var(--primary-text-color);
 }
 
 .formation-body {
