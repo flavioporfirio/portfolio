@@ -38,8 +38,6 @@ body {
   background-color: var(--bg-color);
   overflow-x: hidden;
 
-  padding-bottom: 2rem;
-
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -70,7 +68,6 @@ body.light {
 }
 
 .section {
-  max-width: 120rem;
   padding: 7rem 6rem;
 }
 
