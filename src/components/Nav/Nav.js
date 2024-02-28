@@ -1,10 +1,10 @@
-import "./nav.css";
-import { Moon, Menu } from "lucide-react";
+import { Menu, Moon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import "./nav.css";
 
 const prefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-export default function Nav() {
+export default function Nav({ isVisible }) {
   const [theme, setTheme] = useState(() => {
     const option = prefersColorScheme.matches ? "dark" : "light";
 
@@ -25,7 +25,7 @@ export default function Nav() {
   }, [theme]);
 
   return (
-    <nav>
+    <nav className={`${isVisible ? "sticky" : ""}`}>
       <SectionList />
       <div className="config">
         {/*<p> EN | PT</p> */}

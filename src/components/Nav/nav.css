@@ -9,6 +9,16 @@ nav {
   margin: 0 auto;
 }
 
+nav.sticky {
+  position: fixed;
+  width: 100vw;
+  background-color: var(--secondary-text-color);
+
+  transition: all 0.3s;
+
+  z-index: 11;
+}
+
 .section-list {
   display: flex;
   align-items: center;

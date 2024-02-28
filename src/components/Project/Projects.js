@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { projectList } from "./ProjectList";
 import Project from "./Project";
+import { projectList } from "./ProjectList";
 import "./project.css";
 
 import "swiper/css";
@@ -41,6 +41,9 @@ export default function Projects() {
             1024: {
               slidesPerView: 2,
               spaceBetween: 50,
+            },
+            1240: {
+              slidesPerView: 1,
             },
           }}
         >
