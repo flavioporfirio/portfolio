@@ -4,9 +4,9 @@ import jsImg from "../../assets/skills/js.svg";
 import reactImg from "../../assets/skills/react.svg";
 import "./skill.css";
 
-export default function Skills({ containerRef }) {
+export default function Skills() {
   return (
-    <div id="skills" className="section" ref={containerRef}>
+    <div id="skills" className="section">
       <h1>Habilidades</h1>
       <div className="logos--list">
         <LogoSlide />

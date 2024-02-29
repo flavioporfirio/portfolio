@@ -6,31 +6,29 @@ export default function useIntersectionOberserver() {
 
   const callbackFunction = (entries) => {
     const [entry] = entries;
+
     console.log(entry);
-    if (!entry.isIntersecting) setIsVisible(true);
-    else setIsVisible(false);
+    setIsVisible(!entry.isIntersecting);
+    if (entry.intersectionRatio !== 0) return;
   };
 
   useEffect(() => {
-    const navHeight = document
-      .querySelector("nav")
-      .getBoundingClientRect().height;
+    const navHeight = containerRef.current.getBoundingClientRect().height;
 
-    console.log(navHeight);
     const options = {
       root: null,
-      rootMargin: `-${navHeight}px`,
       threshold: 0,
+      rootMargin: `-${navHeight}px 0px 0px 0px`,
     };
 
     const currRef = containerRef.current;
 
-    const observer = new IntersectionObserver(callbackFunction, options);
+    const headerObserver = new IntersectionObserver(callbackFunction, options);
 
-    if (currRef) observer.observe(currRef);
+    headerObserver.observe(currRef);
 
     return () => {
-      if (currRef) observer.unobserve(currRef);
+      headerObserver.disconnect();
     };
   }, [containerRef]);
 

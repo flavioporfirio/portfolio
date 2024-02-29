@@ -93,7 +93,7 @@
 
   color: var(--primary-text-color);
   background: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 
   cursor: pointer;
 }
@@ -119,10 +119,6 @@
 
   .logos--slide.project--style p {
     font-size: 1.2rem;
-  }
-
-  .project--access {
-    flex-wrap: wrap;
   }
 }
 

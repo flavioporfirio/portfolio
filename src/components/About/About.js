@@ -1,8 +1,8 @@
 import "./about.css";
 
-export default function About() {
+export default function About({ containerRef }) {
   return (
-    <div id="about" className="section">
+    <div id="about" className="section" ref={containerRef}>
       <div className="profile-img">
         <img src="./imgs/profile-image.png" alt="imagem de perfil" />
       </div>

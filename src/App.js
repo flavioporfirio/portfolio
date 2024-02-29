@@ -13,8 +13,8 @@ export default function App() {
   return (
     <div className="app">
       <Nav isVisible={isVisible} />
-      <About />
-      <Skills containerRef={containerRef} />
+      <About containerRef={containerRef} />
+      <Skills />
       <Projects />
       <Formations />
       <Contact />
