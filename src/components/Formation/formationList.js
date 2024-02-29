@@ -10,7 +10,7 @@ export const formationList = [
     duration: 67,
     companyName: "Rocketseat",
     description:
-      "Curso completo de ReactJS Abordando as versõers mais atualizadas inclundo ferramentas como NextJS, Typescript, Context API, Hooks, Styled Components, entre outras. Curso focado 100% na prática.",
+      "Curso completo de ReactJS Abordando as versõers mais atualizadas inclundo ferramentas como NextJS, Typescript, Context API, Hooks, Styled Components, entre outras. Curso focado 100% na prática. adasd dasd ",
     teacherProfileImg: "https://avatars.githubusercontent.com/u/2254731?v=4",
     teacher: "Diego Fernandes",
     github: "https://github.com/diego3g",

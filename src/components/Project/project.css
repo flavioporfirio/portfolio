@@ -46,6 +46,7 @@
 
 .project--info p {
   text-wrap: wrap;
+  overflow-y: auto;
 }
 
 .project--info h2 {
@@ -123,6 +124,10 @@
 }
 
 @media only screen and (max-width: 524px) {
+  .project--info p {
+    text-wrap: wrap;
+  }
+
   .project {
     height: 40rem;
   }
