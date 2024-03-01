@@ -1,4 +1,4 @@
-import { LogoSlide } from "../Skills/Skills";
+import Logos from "../Skills/Logos";
 
 export default function Project({
   project,
@@ -17,11 +17,12 @@ export default function Project({
           <h2>{project.title}</h2>
           <p>{project.projectInfo}</p>
           <div className="project-techs">
-            <LogoSlide
+            <Logos
               react={project.react}
               js={project.js}
               html={project.html}
               css={project.css}
+              ts={project.ts}
               className="project--style"
             />
           </div>

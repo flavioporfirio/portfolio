@@ -18,7 +18,7 @@ export default function About({ containerRef }) {
         </p>
         <a
           target="_blank"
-          href="https://drive.google.com/file/d/1quBRFfzRO76EPUNO4wvNh7dCIVsJjl6D/view"
+          href="https://drive.google.com/file/d/1P3l32WOxmE6iZ-Y7YL19GVNlDNVeBB7o/view?usp=sharing"
           rel="noreferrer"
         >
           <button className="btn-cv">CV</button>

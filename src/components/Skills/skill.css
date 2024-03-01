@@ -92,6 +92,7 @@
 
 .logos--slide {
   display: flex;
+  align-items: center;
 }
 
 #skills .logos--slide {
@@ -112,7 +113,6 @@
 }
 
 .logos--slide img {
-  min-width: 20%;
   width: 4rem;
 }
 
