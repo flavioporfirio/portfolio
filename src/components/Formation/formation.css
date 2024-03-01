@@ -91,7 +91,7 @@
 .formation-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
   padding: 2rem;
 
@@ -132,7 +132,7 @@ header .course-title h3 {
 }
 
 .formation-body .description {
-  height: 20rem;
+  height: 15rem;
   overflow-y: auto;
   font-size: 1.8rem;
 }

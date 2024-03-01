@@ -128,6 +128,10 @@
     text-wrap: wrap;
   }
 
+  .project--info {
+    padding: 1rem;
+  }
+
   .project {
     height: 40rem;
   }

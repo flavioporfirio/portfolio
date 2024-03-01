@@ -1,4 +1,4 @@
-import { Menu, Moon } from "lucide-react";
+import { Menu, Moon, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import "./nav.css";
 
@@ -26,7 +26,7 @@ export default function Nav({ isVisible }) {
 
   return (
     <nav className={`${isVisible ? "sticky" : ""}`}>
-      <SectionList />
+      <NavList />
       <div className="config">
         {/*<p> EN | PT</p> */}
         <ThemeToggler theme={theme} setTheme={setTheme} />
@@ -35,13 +35,13 @@ export default function Nav({ isVisible }) {
   );
 }
 
-function SectionList() {
+function NavList() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="section-list">
       <button className="btn-menu" onClick={() => setIsOpen(!isOpen)}>
-        <Menu className="menu-icon" />
+        {isOpen ? <X className="close-icon" /> : <Menu className="menu-icon" />}
       </button>
       {isOpen && (
         <ul>

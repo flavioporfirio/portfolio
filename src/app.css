@@ -51,6 +51,7 @@ body.dark {
   --primary-text-color: #e2ddfe;
   --bg-formation-color: #27272a;
   --border-separator-color: #473876;
+  --link-color: #e2ddfe;
 
   color: var(--primary-text-color);
 }
@@ -65,6 +66,10 @@ body.light {
 
   --secondary-text-color: #14121f;
   --primary-text-color: #291f43;
+
+  --link-color: #7d66d9;
+
+  color: var(--primary-text-color);
 }
 
 .section {
@@ -72,7 +77,8 @@ body.light {
 }
 
 @media only screen and (max-width: 1024px) {
-  .section {
+  .section,
+  nav {
     padding-inline: 0.5rem;
   }
 }
