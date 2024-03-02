@@ -44,23 +44,30 @@ export default function Project({
 function ProjectAccess({ youtubeLink, siteLink, repository }) {
   return (
     <div className="project--access">
-      <a target="_blank" href={youtubeLink} rel="noreferrer">
-        <button>
-          <ion-icon name="logo-youtube"></ion-icon> Video
-        </button>
-      </a>
-      <a target="_blank" href={siteLink} rel="noreferrer">
-        <button>
-          <ion-icon name="globe-outline"></ion-icon>
-          Acessar
-        </button>
-      </a>
-      <a target="_blank" href={repository} rel="noreferrer">
-        <button>
-          <ion-icon name="logo-github"></ion-icon>
-          Repositório
-        </button>
-      </a>
+      {youtubeLink && (
+        <a target="_blank" href={youtubeLink} rel="noreferrer">
+          <button>
+            <ion-icon name="logo-youtube"></ion-icon> Video
+          </button>
+        </a>
+      )}
+      {siteLink && (
+        <a target="_blank" href={siteLink} rel="noreferrer">
+          <button>
+            <ion-icon name="globe-outline"></ion-icon>
+            Acessar
+          </button>
+        </a>
+      )}
+
+      {repository && (
+        <a target="_blank" href={repository} rel="noreferrer">
+          <button>
+            <ion-icon name="logo-github"></ion-icon>
+            Repositório
+          </button>
+        </a>
+      )}
     </div>
   );
 }

@@ -4,8 +4,6 @@
   display: flex;
   flex-direction: column;
 
-  overflow-x: auto;
-
   background-color: var(--section-color);
 }
 
@@ -20,7 +18,7 @@
   height: 100%;
 
   background-color: var(--section-color);
-  z-index: -1;
+  z-index: -11;
 }
 
 #formations::before {
@@ -45,6 +43,8 @@
 .formations {
   display: flex;
   justify-content: center;
+
+  overflow-x: auto;
 }
 
 .project--item {
@@ -91,9 +91,9 @@
 .formation-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 2rem;
+  justify-content: space-evenly;
+  /* gap: 20px; */
+  padding-inline: 2rem;
 
   max-width: 60rem;
   width: auto;
@@ -132,7 +132,8 @@ header .course-title h3 {
 }
 
 .formation-body .description {
-  height: 15rem;
+  max-height: 15rem;
+  height: auto;
   overflow-y: auto;
   font-size: 1.8rem;
 }
@@ -155,7 +156,7 @@ header .course-title h3 {
 
   padding: 0.3rem;
 
-  border: 2px solid var(--border-separator-color);
+  border: 3px solid var(--border-separator-color);
 }
 
 .teacher-info h2 {

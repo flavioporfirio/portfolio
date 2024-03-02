@@ -1,7 +1,7 @@
+import * as Accordion from "@radix-ui/react-accordion";
 import { useState } from "react";
 import "./formation.css";
 import { formationList } from "./formationList";
-import * as Accordion from "@radix-ui/react-accordion";
 
 export default function Formations() {
   const [selectedFormation, setSelectedFormation] = useState(
@@ -56,7 +56,7 @@ function Formation({
       >
         <p>{formation.year}</p>
         <p>{formation.courseName}</p>
-        <p>{formation.duration} horas</p>
+        <p>{formation.duration}</p>
       </Accordion.Trigger>
       <Accordion.Content className="accordion-content">
         <div className="formation-body">
@@ -71,32 +71,49 @@ function Formation({
               <h3>{formation.courseName}</h3>
               <div className="company-info">
                 <p>{formation.companyName}</p>
-                <p>{formation.duration} horas</p>
+                <p>{formation.duration}</p>
               </div>
             </div>
           </header>
           <p className="description">{formation.description}</p>
-          <div className="separator" />
-          <div className="teacher-container">
-            <div className="teacher-info">
-              <img
-                src={formation?.teacherProfileImg}
-                alt={`${formation.teacher} profile pic`}
-              />
-              <h2>Diego Fernandes</h2>
-            </div>
-            <div className="teacher-contact">
-              <a target="_blank" href={formation.github} rel="noreferrer">
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-              <a target="_blank" href={formation.linkedIn} rel="noreferrer">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-              <a target="_blank" href={formation.github} rel="noreferrer">
-                <ion-icon name="globe-outline"></ion-icon>
-              </a>
-            </div>
-          </div>
+
+          {formation?.teacherProfileImg && (
+            <>
+              <div className="separator" />
+              <div className="teacher-container">
+                <div className="teacher-info">
+                  <img
+                    src={formation?.teacherProfileImg}
+                    alt={`${formation.teacher} profile pic`}
+                  />
+                  <h2>{formation.teacher}</h2>
+                </div>
+                <div className="teacher-contact">
+                  {formation?.github && (
+                    <a target="_blank" href={formation.github} rel="noreferrer">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  )}
+
+                  {formation?.linkedIn && (
+                    <a
+                      target="_blank"
+                      href={formation.linkedIn}
+                      rel="noreferrer"
+                    >
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  )}
+
+                  {formation?.site && (
+                    <a target="_blank" href={formation.site} rel="noreferrer">
+                      <ion-icon name="globe-outline"></ion-icon>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </Accordion.Content>
     </Accordion.Item>

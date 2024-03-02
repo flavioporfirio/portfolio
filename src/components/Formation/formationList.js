@@ -1,61 +1,50 @@
 import { v4 as uuidv4 } from "uuid";
+import js from "../../assets/formations/js.svg";
 import react from "../../assets/formations/react.svg";
 
 export const formationList = [
   {
     id: uuidv4(),
-    year: 2022,
-    courseTech: react,
-    courseName: "The Ultimate React course",
-    duration: 67,
-    companyName: "Rocketseat",
-    description:
-      "Curso completo de ReactJS Abordando as versõers mais atualizadas inclundo ferramentas como NextJS, Typescript, Context API, Hooks, Styled Components, entre outras. Curso focado 100% na prática. adasd dasd Curso completo de ReactJS Abordando as versõers mais atualizadas inclundo ferramentas como NextJS, Typescript, Context API, Hooks, Styled Components, entre outras. Curso focado 100% na prática. adasd dasd Curso completo de ReactJS Abordando as versõers mais atualizadas inclundo ferramentas como NextJS, Typescript, Context API, Hooks, Styled Components, entre outras. Curso focado 100% na prática. adasd dasd ",
-    teacherProfileImg: "https://avatars.githubusercontent.com/u/2254731?v=4",
-    teacher: "Diego Fernandes",
-    github: "https://github.com/diego3g",
-    linkedIn: "https://www.linkedin.com/in/diego-schell-fernandes/",
+    year: "2022-2024",
+    courseTech: "./imgs/formation/M_vermelho.png",
+    courseName: "Análise e Desenvolvimento de Sistemas",
+    duration: "5 semestres",
+    companyName: "Mackenzie",
+    description: `
+
+    Tecnólogo em Análise e desenvolvimento de Sistemas. Formação para analisar, projetar, documentar, especificar, testar, implantar e manter sistemas computacionais de informação. Raciocínio lógico, emprego de linguagens de programação e de metodologias de construção de projetos, preocupação com qualidade, usabilidade, robustez, integridade e segurança de programas.`,
   },
   {
     id: uuidv4(),
-    year: 2022,
-    courseTech: react,
-    courseName: "The Ultimate React course",
-    duration: 67,
-    companyName: "Rocketseat",
+    year: "2023",
+    courseTech: js,
+    courseName: "The Complete Javascript Course",
+    duration: "68.5 horas",
+    companyName: "Curso Udemy",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exeum! Aliquid consequuntur, natus nesciunt eos, eum ratione assumendaaperiam molestias facilis cumque earum quia? Tenetur consequatur libero numquam dolore?",
-    teacherProfileImg: "https://avatars.githubusercontent.com/u/2254731?v=4",
-    teacher: "Diego Fernandes",
-    github: "https://github.com/diego3g",
-    linkedIn: "https://www.linkedin.com/in/diego-schell-fernandes/",
+      "Curso completo de javascript, aprendizagem simples, passo a passo. Exemplos de código práticos, teoria, informações de como o javascript funciona internamente, e projetos completos. ",
+    teacherProfileImg:
+      "https://img-c.udemycdn.com/user/200_H/7799204_2091_5.jpg",
+    teacher: "Jonas Schmedtmann",
+    github: "https://github.com/jonasschmedtmann",
+    linkedIn: "",
+    site: "https://codingheroes.io",
   },
   {
     id: uuidv4(),
-    year: 2022,
+    year: "2023 - 2024",
     courseTech: react,
     courseName: "The Ultimate React course",
-    duration: 67,
-    companyName: "Rocketseat",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exeum! Aliquid consequuntur, natus nesciunt eos, eum ratione assumendaaperiam molestias facilis cumque earum quia? Tenetur consequatur libero numquam dolore?",
-    teacherProfileImg: "https://avatars.githubusercontent.com/u/2254731?v=4",
-    teacher: "Diego Fernandes",
-    github: "https://github.com/diego3g",
-    linkedIn: "https://www.linkedin.com/in/diego-schell-fernandes/",
-  },
-  {
-    id: uuidv4(),
-    year: 2022,
-    courseTech: react,
-    courseName: "The Ultimate React course",
-    duration: 67,
-    companyName: "Rocketseat",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exeum! Aliquid consequuntur, natus nesciunt eos, eum ratione assumendaaperiam molestias facilis cumque earum quia? Tenetur consequatur libero numquam dolore?",
-    teacherProfileImg: "https://avatars.githubusercontent.com/u/2254731?v=4",
-    teacher: "Diego Fernandes",
-    github: "https://github.com/diego3g",
-    linkedIn: "https://www.linkedin.com/in/diego-schell-fernandes/",
+    duration: "67 horas",
+    companyName: "Udemy",
+    description: `Uma abordagem prática para dominar o React, criando aplicativos sofisticados, apoiados por diagramas, teoria e análises dos bastidores do React.
+    O pacote completo que leva você do zero à verdadeira compreensão do React e à construção de aplicativos da web modernos, poderosos e profissionais.
+    Projetos reais. Explicações reais. Reagir de verdade.`,
+    teacherProfileImg:
+      "https://img-c.udemycdn.com/user/200_H/7799204_2091_5.jpg",
+    teacher: "Jonas Schmedtmann",
+    github: "https://github.com/jonasschmedtmann",
+    linkedIn: "",
+    site: "https://codingheroes.io",
   },
 ];
