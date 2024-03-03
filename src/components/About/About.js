@@ -11,10 +11,12 @@ export default function About({ containerRef }) {
           <span className="text sec-text">Desenvolvedor Front-end</span>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
-          laudantium quia fugiat distinctio, quo id officia accusamus cum
-          aperiam non, tempora dolorum libero doloremque. Reprehenderit ad
-          inventore temporibus blanditiis placeat.
+          Olá! Me chamo Flávio Porfírio, tenho 24 anos e venho me dedicando
+          diariamente a programação. Desde o início não há um dia que eu não
+          aprendi algo novo.Sou um cara bem curioso quando se trata de
+          desenvolvimento de software, sempre com uma mente lógica e aberta pra
+          aprender mais. Estou sempre em busca de desafios e disposto a explorar
+          novas tecnologias.
         </p>
         <a
           target="_blank"
