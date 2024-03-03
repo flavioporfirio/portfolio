@@ -30,10 +30,10 @@
   height: 100%;
 
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  border-top: 3rem solid var(--primary-text-color);
-  border-right: 3rem solid var(--primary-text-color);
-  border-bottom: 3rem solid var(--border-separator-color);
-  border-left: 3rem solid var(--border-separator-color);
+  border-top: 2rem solid var(--primary-text-color);
+  border-right: 2rem solid var(--primary-text-color);
+  border-bottom: 2rem solid var(--border-separator-color);
+  border-left: 2rem solid var(--border-separator-color);
   border-radius: 0.5rem;
 }
 

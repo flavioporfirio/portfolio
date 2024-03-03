@@ -67,7 +67,8 @@
   font-weight: 600;
 }
 
-.logos--slide.project--style img {
+.logos--slide.project--style .item img {
+  flex: 1 1 3rem;
   width: 3rem;
 }
 

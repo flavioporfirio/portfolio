@@ -4,7 +4,7 @@ export default function About({ containerRef }) {
   return (
     <div id="about" className="section" ref={containerRef}>
       <div className="profile-img">
-        <img src="./imgs/profile-image.png" alt="imagem de perfil" />
+        <img src="./imgs/profile-image.jpeg" alt="imagem de perfil" />
       </div>
       <div className="intro">
         <div className="about--title">

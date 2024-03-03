@@ -66,7 +66,7 @@ export const projectList = [
   },
   {
     id: uuidv4(),
-    title: "E-commerce product page",
+    title: "Dictionary web app",
     projectInfo:
       "Solução para o E-commercer product page challenge on Frontend Mentor",
     tech: ["javascript, css, html"],

@@ -7,7 +7,6 @@ export default function useIntersectionOberserver() {
   const callbackFunction = (entries) => {
     const [entry] = entries;
 
-    console.log(entry);
     setIsVisible(!entry.isIntersecting);
     if (entry.intersectionRatio !== 0) return;
   };

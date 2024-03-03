@@ -1,15 +1,15 @@
-import { toast } from "sonner";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
-import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import z from "zod";
 
 const createFormSchema = z.object({
   name: z.string().min(1, "Insira seu nome"),
   email: z.string().email("Insira um email válido"),
-  phone: z.string().min(11, "Insira seu telefone"),
+  phone: z.string(),
   message: z.string().min(1, "Insira sua mensagem"),
 });
 
