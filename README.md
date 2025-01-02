@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img src="./src/assets/interface.png" alt="Project logo"></a>
-</p>
-
 <h1 align="center">Portfolio</h1>
 
 <div align="center">
